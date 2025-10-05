@@ -1,6 +1,6 @@
 # Implementasi Transformer (GPT) dari Nol dengan NumPy
 
-Proyek ini merupakan implementasi arsitektur *decoder-only Transformer* (model gaya GPT) dari dasar (*from scratch*) menggunakan NumPy. Implementasi ini dibuat untuk memenuhi tugas mata kuliah dan sebagai sarana pembelajaran untuk memahami cara kerja internal arsitektur Transformer tanpa bergantung pada *library deep learning* seperti PyTorch atau TensorFlow[cite: 3].
+Proyek ini merupakan implementasi arsitektur *decoder-only Transformer* (model gaya GPT) dari dasar (*from scratch*) menggunakan NumPy. Implementasi ini dibuat untuk memenuhi tugas mata kuliah dan sebagai sarana pembelajaran untuk memahami cara kerja internal arsitektur Transformer tanpa bergantung pada *library deep learning* seperti PyTorch atau TensorFlow.
 
 Fokus utama proyek ini adalah membangun alur *forward pass*, mulai dari lapisan embedding hingga menghasilkan distribusi probabilitas untuk prediksi token berikutnya,
 
@@ -18,12 +18,12 @@ Kode diorganisir secara modular untuk memisahkan setiap komponen utama dari arsi
 
 Model ini mengimplementasikan semua komponen wajib dari arsitektur Transformer:
 
--   [cite_start]**Token Embedding**: Memetakan token input ke dalam representasi vektor.
--   [cite_start]**Positional Encoding**: Menggunakan metode sinusoidal standar untuk menyuntikkan informasi posisi. Juga tersedia **Rotary Positional Encoding (RoPE)** sebagai fitur tambahan[cite: 31].
+-   **Token Embedding**: Memetakan token input ke dalam representasi vektor.
+-   **Positional Encoding**: Menggunakan metode sinusoidal standar untuk menyuntikkan informasi posisi. Juga tersedia **Rotary Positional Encoding (RoPE)** sebagai fitur tambahan.
 -   **Multi-Head Self-Attention**: Mekanisme atensi yang memungkinkan model untuk menimbang relevansi token lain, dengan beberapa "kepala" atensi yang berjalan paralel.
--   [cite_start]**Causal Masking**: Memastikan bahwa saat memprediksi token pada posisi `t`, model hanya dapat mengakses informasi dari token sebelumnya (posisi `< t`).
--   [cite_start]**Feed-Forward Network (FFN)**: Jaringan dua lapis dengan aktivasi ReLU yang diterapkan setelah mekanisme atensi.
--   [cite_start]**Residual Connections & Layer Normalization**: Digunakan di setiap sub-lapisan untuk menstabilkan training dan memungkinkan model yang lebih dalam.
+-   **Causal Masking**: Memastikan bahwa saat memprediksi token pada posisi `t`, model hanya dapat mengakses informasi dari token sebelumnya (posisi `< t`).
+-   **Feed-Forward Network (FFN)**: Jaringan dua lapis dengan aktivasi ReLU yang diterapkan setelah mekanisme atensi.
+-   **Residual Connections & Layer Normalization**: Digunakan di setiap sub-lapisan untuk menstabilkan training dan memungkinkan model yang lebih dalam.
 
 ### Fitur Tambahan (Bonus)
 
