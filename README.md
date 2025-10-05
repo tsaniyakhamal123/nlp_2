@@ -16,6 +16,8 @@ Kode diorganisir secara modular untuk memisahkan setiap komponen utama dari arsi
 
 ## Fitur dan Arsitektur
 
+## Fitur dan Arsitektur
+
 Model ini mengimplementasikan semua komponen wajib dari arsitektur Transformer:
 
 -   **Token Embedding**: Memetakan token input ke dalam representasi vektor.
@@ -24,6 +26,16 @@ Model ini mengimplementasikan semua komponen wajib dari arsitektur Transformer:
 -   **Causal Masking**: Memastikan bahwa saat memprediksi token pada posisi `t`, model hanya dapat mengakses informasi dari token sebelumnya (posisi `< t`).
 -   **Feed-Forward Network (FFN)**: Jaringan dua lapis dengan aktivasi ReLU yang diterapkan setelah mekanisme atensi.
 -   **Residual Connections & Layer Normalization**: Digunakan di setiap sub-lapisan untuk menstabilkan training dan memungkinkan model yang lebih dalam.
+
+### Arsitektur GPT Model
+Ilustrasi arsitektur GPT secara keseluruhan ditunjukkan pada gambar berikut:
+
+![Arsitektur GPT](Group%202.png)
+
+### Arsitektur Transformer Block
+Diagram di bawah menunjukkan detail struktur satu blok Transformer (Transformer Block) yang terdiri dari mekanisme atensi, residual connection, layer normalization, dan feed-forward network:
+
+![Arsitektur Transformer Block](Group3%20(1).png)
 
 ### Fitur Tambahan (Bonus)
 
