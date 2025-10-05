@@ -35,7 +35,7 @@ Ilustrasi arsitektur GPT secara keseluruhan ditunjukkan pada gambar berikut:
 ### Arsitektur Transformer Block
 Diagram di bawah menunjukkan detail struktur satu blok Transformer (Transformer Block) yang terdiri dari mekanisme atensi, residual connection, layer normalization, dan feed-forward network:
 
-![Arsitektur Transformer Block](Group3%20(1).png)
+![Arsitektur Transformer Block](Group%3%20(1).png)
 
 ### Fitur Tambahan (Bonus)
 
