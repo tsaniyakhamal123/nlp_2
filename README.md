@@ -1,12 +1,12 @@
 # Implementasi Transformer (GPT) dari Nol dengan NumPy
 
-Proyek ini merupakan implementasi arsitektur *decoder-only Transformer* (model gaya GPT) dari dasar (*from scratch*) menggunakan NumPy. [cite_start]Implementasi ini dibuat untuk memenuhi tugas mata kuliah dan sebagai sarana pembelajaran untuk memahami cara kerja internal arsitektur Transformer tanpa bergantung pada *library deep learning* seperti PyTorch atau TensorFlow[cite: 3].
+Proyek ini merupakan implementasi arsitektur *decoder-only Transformer* (model gaya GPT) dari dasar (*from scratch*) menggunakan NumPy. Implementasi ini dibuat untuk memenuhi tugas mata kuliah dan sebagai sarana pembelajaran untuk memahami cara kerja internal arsitektur Transformer tanpa bergantung pada *library deep learning* seperti PyTorch atau TensorFlow[cite: 3].
 
-[cite_start]Fokus utama proyek ini adalah membangun alur *forward pass*, mulai dari lapisan embedding hingga menghasilkan distribusi probabilitas untuk prediksi token berikutnya[cite: 4].
+Fokus utama proyek ini adalah membangun alur *forward pass*, mulai dari lapisan embedding hingga menghasilkan distribusi probabilitas untuk prediksi token berikutnya,
 
 ## Struktur Proyek
 
-[cite_start]Kode diorganisir secara modular untuk memisahkan setiap komponen utama dari arsitektur Transformer[cite: 18]:
+Kode diorganisir secara modular untuk memisahkan setiap komponen utama dari arsitektur Transformer[cite: 18]:
 
 -   `main.py`: Skrip utama yang merakit semua komponen menjadi model GPT utuh. Berisi kelas `TransformerBlock` dan `GPT`, serta skrip untuk menjalankan uji coba sederhana.
 -   `embedding.py`: Berisi implementasi untuk `TokenEmbedding`, `PositionalEncoding` (sinusoidal), dan `RotaryPositionalEncoding (RoPE)`.
@@ -16,14 +16,14 @@ Proyek ini merupakan implementasi arsitektur *decoder-only Transformer* (model g
 
 ## Fitur dan Arsitektur
 
-[cite_start]Model ini mengimplementasikan semua komponen wajib dari arsitektur Transformer[cite: 6]:
+Model ini mengimplementasikan semua komponen wajib dari arsitektur Transformer:
 
--   [cite_start]**Token Embedding**: Memetakan token input ke dalam representasi vektor[cite: 7].
--   [cite_start]**Positional Encoding**: Menggunakan metode sinusoidal standar untuk menyuntikkan informasi posisi[cite: 8]. [cite_start]Juga tersedia **Rotary Positional Encoding (RoPE)** sebagai fitur tambahan[cite: 31].
--   [cite_start]**Multi-Head Self-Attention**: Mekanisme atensi yang memungkinkan model untuk menimbang relevansi token lain, dengan beberapa "kepala" atensi yang berjalan paralel[cite: 10].
--   [cite_start]**Causal Masking**: Memastikan bahwa saat memprediksi token pada posisi `t`, model hanya dapat mengakses informasi dari token sebelumnya (posisi `< t`)[cite: 13].
--   [cite_start]**Feed-Forward Network (FFN)**: Jaringan dua lapis dengan aktivasi ReLU yang diterapkan setelah mekanisme atensi[cite: 11].
--   [cite_start]**Residual Connections & Layer Normalization**: Digunakan di setiap sub-lapisan untuk menstabilkan training dan memungkinkan model yang lebih dalam[cite: 12].
+-   [cite_start]**Token Embedding**: Memetakan token input ke dalam representasi vektor.
+-   [cite_start]**Positional Encoding**: Menggunakan metode sinusoidal standar untuk menyuntikkan informasi posisi. Juga tersedia **Rotary Positional Encoding (RoPE)** sebagai fitur tambahan[cite: 31].
+-   **Multi-Head Self-Attention**: Mekanisme atensi yang memungkinkan model untuk menimbang relevansi token lain, dengan beberapa "kepala" atensi yang berjalan paralel.
+-   [cite_start]**Causal Masking**: Memastikan bahwa saat memprediksi token pada posisi `t`, model hanya dapat mengakses informasi dari token sebelumnya (posisi `< t`).
+-   [cite_start]**Feed-Forward Network (FFN)**: Jaringan dua lapis dengan aktivasi ReLU yang diterapkan setelah mekanisme atensi.
+-   [cite_start]**Residual Connections & Layer Normalization**: Digunakan di setiap sub-lapisan untuk menstabilkan training dan memungkinkan model yang lebih dalam.
 
 ### Fitur Tambahan (Bonus)
 
@@ -34,7 +34,7 @@ Proyek ini merupakan implementasi arsitektur *decoder-only Transformer* (model g
 
 ## Dependensi
 
-[cite_start]Proyek ini hanya memerlukan **NumPy** untuk operasi komputasi dan **Matplotlib** untuk visualisasi[cite: 16].
+Proyek ini hanya memerlukan **NumPy** untuk operasi komputasi dan **Matplotlib** untuk visualisasi[cite: 16].
 
 ```
 numpy
@@ -45,7 +45,7 @@ matplotlib
 
 1.  **Clone Repositori**
     ```bash
-    git clone [https://github.com/](https://github.com/)[NAMA_USER_ANDA]/[NAMA_REPO_ANDA].git
+    git clone https://github.com/tsaniyakhamal123/nlp_2.git
     cd [NAMA_REPO_ANDA]
     ```
 
@@ -55,7 +55,7 @@ matplotlib
     ```
 
 3.  **Jalankan Skrip Utama**
-    [cite_start]Program akan menjalankan satu kali *forward pass* dengan input token sederhana dan mencetak hasilnya[cite: 23].
+    Program akan menjalankan satu kali *forward pass* dengan input token sederhana dan mencetak hasilnya[cite: 23].
     ```bash
     python main.py
     ```
@@ -73,4 +73,4 @@ Setelah dijalankan, program akan mencetak dimensi output (logits dan probabilita
 
 ## Penulis
 
-- **[Nama Anda]** - [NIM Anda]
+- **[ Tsaniya Khamal Khasanah]** - [ 22/503817/TK/55074]
